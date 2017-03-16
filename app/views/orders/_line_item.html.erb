@@ -1,6 +1,7 @@
 <% product = Product.find_by(id: product_id) %>
   <% item_total = product.price * quantity.to_i %>
   <% @order_total += item_total %>
+  <% @quantity_total += quantity %>
 
   <tr>
     <td>

@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta content='text/html; charset=UTF-8' http-equiv='Content-Type' />
+  </head>
+  <body>
+    <h2>Your order has been placed.</h2>
+    <h4>Items ordered:</h4>
+    <p>
+      <% line_items = LineItem.where(order_id: @order.id) %>
+      <% line_items.each do |line_item| %>
+        <% product = Product.find_by(id: line_item.product_id) %>
+        <%= product.name %>
+      <% end %>
+    </p>
+    Total: <%= number_to_currency(@order.total_cents / 100) %>
+  </body>
+</html>
