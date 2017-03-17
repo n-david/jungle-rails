@@ -7,10 +7,9 @@
     <h2>Your order has been placed.</h2>
     <h4>Items ordered:</h4>
     <p>
-      <% line_items = LineItem.where(order_id: @order.id) %>
-      <% line_items.each do |line_item| %>
+      <% @line_items.each do |line_item| %>
         <% product = Product.find_by(id: line_item.product_id) %>
-        <%= product.name %>
+        <span><%= product.name %> - <%= line_item.quantity %></span>
       <% end %>
     </p>
     Total: <%= number_to_currency(@order.total_cents / 100) %>
