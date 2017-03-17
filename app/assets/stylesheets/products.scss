@@ -85,6 +85,58 @@ main section.products-show {
       max-width: 100%;
     }
   }
+
+  .new-review {
+    position: relative;
+    left: 47%;
+    margin-top: -10%;
+    border-radius: 10px;
+    background: #eee;
+    width: 48%;
+    height: 100px;
+    /*text-align: center;*/
+
+    .new-review-input {
+      padding-top: 25px;
+    }
+
+    .submit-review {
+      float: right;
+      top: 25px;
+    }
+
+    textarea {
+      width: 75%;
+    }
+  }
+
+  .reviews {
+    position: relative;
+    left: 47%;
+    padding: 15px;
+    border-radius: 10px;
+    background-color: #eee;
+    width: 48%;
+
+    .review {
+      padding-bottom: 2px;
+      border-bottom: 2px;
+      border-color: gray;
+      border-bottom-style: solid;
+
+      .description {
+        width: 87%;
+      }
+
+      .rating {
+        text-align: right;
+      }
+
+      .delete-review {
+        float: right;
+      }
+    }
+  }
 }
 
 

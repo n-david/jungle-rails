@@ -132,50 +132,38 @@ product12 = cat3.products.create!({
   price: 2_483.75
 })
 
-## USERS
-
-puts "Re-creating Users ..."
-
-User.destroy_all
-
-user1 = User.create!({
-  name: 'David',
-  email: 'david@test.com',
-  password_digest: '123'
-})
-
-user2 = User.create!({
-  name: 'Hans',
-  email: 'hans@test.com',
-  password_digest: '456'
-})
-
 ## REVIEWS
 
-puts "Re-creating Reviews ..."
+# puts "Re-creating Reviews ..."
 
-Review.destroy_all
+# Review.destroy_all
 
-review1 = Review.create!({
-  product_id: 1,
-  user_id: 1,
-  description: 'Sucks',
-  rating: 1
-})
+# review1 = Review.create!({
+#   product_id: 1,
+#   user_id: 1,
+#   description: 'Sucks',
+#   rating: 1
+# })
 
-review1 = Review.create!({
-  product_id: 2,
-  user_id: 2,
-  description: 'Great',
-  rating: 5
-})
+# review2 = Review.create!({
+#   product_id: 2,
+#   user_id: 1,
+#   description: 'Great pants, I would ipsum monitor car lamp tables',
+#   rating: 5
+# })
 
-review1 = Review.create!({
-  product_id: 3,
-  user_id: 2,
-  description: 'Good',
-  rating: 3
-})
+# review3 = Review.create!({
+#   product_id: 2,
+#   user_id: 2,
+#   description: 'Good, but not great, unlike cups bottle cats and dogs',
+#   rating: 3
+# })
 
+# review4 = Review.create!({
+#   product_id: 2,
+#   user_id: 3,
+#   description: 'Kinda shitty tbh, I like blueberries and leather jackets and windows and blinds',
+#   rating: 1
+# })
 
 puts "DONE!"
