@@ -6,13 +6,13 @@ class ReviewsController < ApplicationController
     @review = @product.reviews.new(review_params)
     @review.user = current_user
     @review.save
-    redirect_to product_path(@product)
+    redirect_to :back
   end
 
   def destroy
     @review = Review.find(params[:id])
     @review.destroy
-    redirect_to product_path(params[:product_id])
+    redirect_to :back
   end
 
   private

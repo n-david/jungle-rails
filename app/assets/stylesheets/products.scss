@@ -65,6 +65,11 @@ main section.categories-show {
         font-size: 14px;
       }
 
+      aside.average-rating {
+        text-align: right;
+        font-weight: bold;
+      }
+
       &:hover {
 
         border-color: #999;

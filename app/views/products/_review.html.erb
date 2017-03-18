@@ -12,20 +12,22 @@
   </div>
 <% end %>
 
-<div class="reviews col-sm-8">
-  <% @reviews.reverse_order.each do |review| %>
-    <dl class="review dl-vertical">
-      <% if current_user && review.user.id == current_user.id %>
-        <dd class="delete-review btn-group">
-          <%= link_to '', product_review_path(product_id: @product.id, id: review.id),
-          method: :delete,
-          data: { confirm: 'Are you sure?' },
-          class: "btn btn-danger btn-xs glyphicon glyphicon-trash" %>
-        </dd>
-      <% end %>
-      <dt><%= review.user.name %></dt>
-      <dd class="description"><%= review.description %></dd>
-      <dd class="rating"><%= raw '&#9733' * review.rating %></dd>
-    </dl>
-  <% end %>
-</div>
+<% if !(@reviews.size.zero?) %>
+  <div class="reviews col-sm-8">
+    <% @reviews.reverse_order.each do |review| %>
+      <dl class="review dl-vertical">
+        <% if current_user && review.user.id == current_user.id %>
+          <dd class="delete-review btn-group">
+            <%= link_to '', product_review_path(product_id: @product.id, id: review.id),
+            method: :delete,
+            data: { confirm: 'Are you sure?' },
+            class: "btn btn-danger btn-xs glyphicon glyphicon-trash" %>
+          </dd>
+        <% end %>
+        <dt><%= review.user.name %></dt>
+        <dd class="description"><%= review.description %></dd>
+        <dd class="rating"><%= raw '&#9733' * review.rating %></dd>
+      </dl>
+    <% end %>
+  </div>
+<% end %>
