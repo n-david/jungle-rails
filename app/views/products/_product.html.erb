@@ -27,7 +27,7 @@
 
   <aside class="average-rating">
     <% if product.reviews %>
-      <%= (product.reviews.average(:rating)).to_f.round(2) %> &#9733;
+      <%= (product.reviews.average(:rating)).to_f.round(1) %> &#9733;
     <% end %>
   </aside>
 

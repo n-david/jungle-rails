@@ -6,12 +6,12 @@
 
   <article class="product-detail">
 
-    <div class="row">
-      <div class="col-sm-4">
+    <!-- <div class="row"> -->
+      <div class="col-sm-6">
         <%= image_tag @product.image.url, class: 'main-img' %>
       </div>
 
-      <div class="col-sm-8">
+      <div class="col-sm-6">
         <dl class="dl-horizontal">
           <dt>Name</dt>
           <dd><%= @product.name %></dd>
@@ -23,7 +23,7 @@
           <dd><%= @product.price %></dd>
         </dl>
       </div>
-    </div>
+    <!-- </div> -->
 
     <%= render 'review' %>
   </article>

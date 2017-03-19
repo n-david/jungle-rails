@@ -3,10 +3,8 @@
     <%= form_for [@product, @review] do |f| %>
       <div class="new-review-input">
         <%= f.text_area :description %>
-        <%= f.select :rating, (1..5) %>
-        <div class="submit-review btn-group">
-          <%= f.submit "Submit", class: "btn btn-primary" %>
-        </div>
+        <%= f.select :rating, options_for_select([['&#9733'.html_safe, ""], 1, 2, 3, 4, 5]), {}, class: "form-control dropdown" %>
+        <%= f.submit "Post", class: "btn btn-primary submit-review" %>
       </div>
     <% end %>
   </div>
