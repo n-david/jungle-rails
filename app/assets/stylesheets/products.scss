@@ -92,9 +92,6 @@ main section.products-show {
   }
 
   .new-review {
-    @media (max-width: 1400px) and (min-width: 900px) {
-      width: 40%;
-    }
     @media (max-width: 1400px) and (min-width: 768px) {
       width: 42%;
     }
@@ -142,9 +139,6 @@ main section.products-show {
   }
 
   .reviews {
-    @media (max-width: 1400px) and (min-width: 900px) {
-      width: 35%;
-    }
     @media (max-width: 1400px) and (min-width: 768px) {
       width: 42%;
     }
