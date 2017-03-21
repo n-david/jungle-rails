@@ -3,7 +3,7 @@ require 'rails_helper'
 RSpec.describe Product, type: :model do
 
   before(:all) do
-    @category = Category.create(name: 'Phones')
+    @category = Category.new(name: 'Phones')
   end
 
   describe 'Validations' do
